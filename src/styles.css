@@ -2,3 +2,10 @@ body {
   background-color: lightblue;
   font-family: Arial, sans-serif;
 }
+
+ul {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  justify-content: center;
+}

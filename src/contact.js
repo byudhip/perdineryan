@@ -1,10 +1,8 @@
-const content = document.querySelector("#content");
-
-
 const loadContact = () => {
-  const headingText = document.createElement("h1");
-  headingText.textContent = "This is contact page";
-  content.appendChild(headingText);
+  const content = document.querySelector("#content");
+  const heading = document.createElement("h1");
+  heading.textContent = "This is contact page";
+  content.appendChild(heading);
 }
 
 export {loadContact};

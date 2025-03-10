@@ -1,6 +1,40 @@
+:root {
+  --primary: #e0afa0;
+  --hover: #d49484;
+  --secondary: #6c757d;
+  --bgcolor: #f8f9fa;
+  --regtext: #333333;
+  --hitext: #d2b48c;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* Body Styles */
 body {
-  background-color: lightblue;
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Helvetica, Arial, system-ui;
+  height: 100vh;
+  
+  line-height: 1.5;
+  background-color: var(--bgcolor);
 }
 
 ul {
@@ -8,4 +42,42 @@ ul {
   gap: 10px;
   list-style-type: none;
   justify-content: center;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 6rem;
+  height: 2rem;
+  border-style: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--hover);
+}
+
+.header {
+  background-color: var(--bgcolor);
+  margin: 1rem;
+}
+
+#content {
+  height: 80vh;
+  width: 60vw;
+  margin: 1rem;
+  background-color: var(--primary);
+  text-align: center;
+  flex: 1;
+}
+
+
+
+.footer {
+  margin: 1rem;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
 }

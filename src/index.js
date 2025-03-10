@@ -3,12 +3,11 @@ import * as home from "./home.js";
 import * as menu from "./menu.js";
 import * as contact from "./contact.js";
 
-console.log("is working");
-const navMenu = document.querySelector("nav");
-
-home.loadHome();
+home.initHome();  
 
 const content = document.querySelector("#content");
+console.log("is working");
+const navMenu = document.querySelector("nav");
 
 const clearContent = () => {
   content.innerHTML = "";

@@ -1,15 +1,10 @@
-import imgLoader from "./image-loader.js";
+import {getImages} from "./utils.js";
+import { CreateElement } from "./utils.js";
 
-const images = imgLoader(
+const images = getImages(
   require.context("./images", false, /\.(png|jpe?g|svg)$/)
 );
 
-function CreateElement(tag, className, textContent) {
-  const element = document.createElement(tag);
-  if (className) element.classList.add(className);
-  if (textContent) element.textContent = textContent;
-  return element;
-}
 
 function initHome() {
   const body = document.querySelector("body");
@@ -74,6 +69,12 @@ function initHome() {
     "testimony",
     "Absolutely obsessed! The vibe is effortlessly chic, and every dish is as stunning as it is delicious. The truffle mushroom risotto was pure perfection, and the cocktails? Next level. A must-visit spot for foodies and Instagram lovers alike!"
   );
+  const testimonyGiver = CreateElement("p", null, "Amanda");
+  const box = CreateElement("div", "box");
+  content.appendChild(box)
+  box.appendChild(testimony);
+  box.appendChild(testimonyGiver);
+
   // const home = `
   //     <div id="content">
   //      <h1 class="hook">This is homepage</h1>

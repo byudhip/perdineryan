@@ -1,6 +1,6 @@
 import * as home from "./home.js";
 import * as menu from "./menu.js";
-import * as contact from "./contact.js";
+import * as about from "./about.js";
 
 function getImages(r) {
   let images = {};
@@ -19,12 +19,12 @@ function CreateElement(tag, id = null, className = null, textContent = null) {
 }
 
 function buttonHandler(e) {
-  if (e.target.classList.contains("home")) {
+  if (e.target.classList.contains("home")||e.target.classList.contains("logo")) {
     home.loadHome();
   } else if (e.target.classList.contains("menu")) {
     menu.loadMenu();
-  } else if (e.target.classList.contains("contact")) {
-    contact.loadContact();
+  } else if (e.target.classList.contains("about")) {
+    about.loadAbout();
   }
 }
 

@@ -35,10 +35,12 @@ const loadHome = () => {
     const image = CreateElement("img", null, "box-img");
     image.src = asset;
     box.appendChild(image);
+    const boxText = CreateElement("div", null, "box-text");
+    box.appendChild(boxText);
     const headlineText = CreateElement("h3", null, null, headline);
-    box.appendChild(headlineText);
+    boxText.appendChild(headlineText);
     const description = CreateElement("p", null, null, text);
-    box.appendChild(description);
+    boxText.appendChild(description);
   });
 
   const testimony = CreateElement(
@@ -47,7 +49,7 @@ const loadHome = () => {
     "Absolutely obsessed! The vibe is effortlessly chic, and every dish is as stunning as it is delicious. The truffle mushroom risotto was pure perfection, and the cocktails? Next level. A must-visit spot for foodies and Instagram lovers alike!"
   );
   const testimonyGiver = CreateElement("p", null, null, "- Amanda");
-  const box = CreateElement("div", null, "box");
+  const box = CreateElement("div", null, "testimony-box");
   content.appendChild(box);
   box.appendChild(testimony);
   box.appendChild(testimonyGiver);

@@ -5,6 +5,7 @@
   --bgcolor: #f8f9fa;
   --regtext: #333333;
   --hitext: #d2b48c;
+  --logo: ;
 }
 
 /* Reset */
@@ -59,7 +60,7 @@ button {
   width: 6rem;
   height: 2rem;
   border-style: none;
-  cursor: pointer;
+  cursor: url("./images/cursor-odin-project-resto.png"), auto;
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -96,6 +97,7 @@ button:hover {
   gap: 10px;
   margin: 10px;
   padding: 10px;
+  cursor: url("./images/cursor-odin-project-resto.png"), auto;
   border: 1px solid var(--secondary);
   border-radius: 10px;
   background-color: white;

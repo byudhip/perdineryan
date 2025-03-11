@@ -31,10 +31,17 @@ body {
   justify-content: flex-start;
   align-items: center;
   font-family: Helvetica, Arial, system-ui;
-  /* height: 100vh; */
-  
   line-height: 1.5;
-  background-color: var(--bgcolor);
+  background: linear-gradient(to bottom, var(--bgcolor), #ececec);
+}
+
+h2 {
+  margin: 15px;
+  color: var(--bgcolor);
+  background-color: var(--primary);
+  padding: 15px;
+  width: 13rem;
+  border-radius: 12px;
 }
 
 ul {
@@ -47,16 +54,30 @@ ul {
 button {
   background-color: var(--primary);
   color: white;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 1rem, 45rem);
   font-weight: bold;
   width: 6rem;
   height: 2rem;
   border-style: none;
   cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 button:hover {
   background-color: var(--hover);
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+#logo {
+  position:absolute;
+  top: 1%;
+  left: 1%;
+  /* transform: rotate(270deg); */
+  width: 200px;
+  height: auto;
 }
 
 .header {
@@ -65,24 +86,48 @@ button:hover {
 }
 
 #content {
-  /* height: 80vh; */
   width: 60vw;
   margin: 1rem;
-  background-color: var(--primary);
-  text-align: center;
-  /* flex: 1; */
+  background-color: var(--bgcolor);
 }
 
 .box {
   display: flex;
   gap: 10px;
   margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.02);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .box-img {
   width: 30%;
-  height: 30%;
+  max-width: 300px;
+  height: auto;
+}
 
+.box h3,
+p {
+  color: var(--regtext);
+}
+
+.testimony-box {
+  gap: 10px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: var(--bgcolor);
+  font-style: italic;
 }
 
 .footer {

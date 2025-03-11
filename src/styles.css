@@ -89,7 +89,7 @@ button {
   font-size: clamp(0.5rem, 1.2rem, 45rem);
   font-weight: bold;
   width: 6rem;
-  height: 2rem;
+  height: 3rem;
   border-style: none;
   cursor: url("./images/cursor-odin-project-resto.png"), auto;
   border-radius: 8px;

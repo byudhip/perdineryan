@@ -43,7 +43,7 @@ const loadMenu = () => {
     boxText.appendChild(description);
   });
 
-  const mainCourseText = CreateElement("h2", null, "playfair-display-headline", "Main Course");
+  const mainCourseText = CreateElement("h2", null, "playfair-display-headline", "Entrée");
   content.appendChild(mainCourseText);
 
   const mainCourseContent = [
@@ -100,6 +100,41 @@ const loadMenu = () => {
   ];
 
   dessertContent.forEach(({ asset, headline, text }) => {
+    const box = CreateElement("div", null, "box");
+    content.appendChild(box);
+    const image = CreateElement("img", null, "box-img");
+    image.src = asset;
+    box.appendChild(image);
+    const boxText = CreateElement("div", null, "box-text");
+    box.appendChild(boxText);
+    const headlineText = CreateElement("h3", null, "playfair-display-headline", headline);
+    boxText.appendChild(headlineText);
+    const description = CreateElement("p", null, "plus-jakarta-sans", text);
+    boxText.appendChild(description);
+  });
+
+  const drinksText = CreateElement("h2", null, "playfair-display-headline", "Drinks");
+  content.appendChild(drinksText);
+ 
+  const drinksContent = [
+    {
+      asset: images["dr-berry-basil.png"],  
+      headline: "Berry Basil Cooler",
+      text: "A fruity and aromatic blend of muddled berries, basil, and a splash of soda for a lightly sweet and invigorating sip.",
+    },
+    {
+      asset: images["dr-iced-honey.png"],
+      headline: "Iced Honey Lavender Latte ",
+      text: "A smooth espresso drink with a hint of honey and lavender, served over ice with your choice of milk.",
+    },
+    {
+      asset: images["dr-rosemary.png"],
+      headline: "Rosemary Lemonade Spritz",
+      text: "A refreshing mix of freshly squeezed lemons, rosemary-infused syrup, and sparkling water for a bright, herbal twist.",
+    },
+  ];
+
+  drinksContent.forEach(({ asset, headline, text }) => {
     const box = CreateElement("div", null, "box");
     content.appendChild(box);
     const image = CreateElement("img", null, "box-img");

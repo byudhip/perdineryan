@@ -34,6 +34,7 @@ const loadHome = () => {
     content.appendChild(box);
     const image = CreateElement("img", null, "box-img");
     image.src = asset;
+    image.loading = "lazy";
     box.appendChild(image);
     const boxText = CreateElement("div", null, "box-text");
     box.appendChild(boxText);

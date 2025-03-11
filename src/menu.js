@@ -8,7 +8,7 @@ const loadMenu = () => {
   const content = document.querySelector("#content");
   content.innerHTML = "";
 
-  const appetizerText = CreateElement("h2", null, null, "Appetizer");
+  const appetizerText = CreateElement("h2", null, "playfair-display-headline", "Appetizer");
   content.appendChild(appetizerText);
 
   const appetizerContent = [
@@ -37,13 +37,13 @@ const loadMenu = () => {
     box.appendChild(image);
     const boxText = CreateElement("div", null, "box-text");
     box.appendChild(boxText);
-    const headlineText = CreateElement("h3", null, null, headline);
+    const headlineText = CreateElement("h3", null, "playfair-display-headline", headline);
     boxText.appendChild(headlineText);
-    const description = CreateElement("p", null, null, text);
+    const description = CreateElement("p", null, "plus-jakarta-sans", text);
     boxText.appendChild(description);
   });
 
-  const mainCourseText = CreateElement("h2", null, null, "Main Course");
+  const mainCourseText = CreateElement("h2", null, "playfair-display-headline", "Main Course");
   content.appendChild(mainCourseText);
 
   const mainCourseContent = [
@@ -72,13 +72,13 @@ const loadMenu = () => {
     box.appendChild(image);
     const boxText = CreateElement("div", null, "box-text");
     box.appendChild(boxText);
-    const headlineText = CreateElement("h3", null, null, headline);
+    const headlineText = CreateElement("h3", null, "playfair-display-headline", headline);
     boxText.appendChild(headlineText);
-    const description = CreateElement("p", null, null, text);
+    const description = CreateElement("p", null, "plus-jakarta-sans", text);
     boxText.appendChild(description);
   });
 
-  const dessertText = CreateElement("h2", null, null, "Dessert");
+  const dessertText = CreateElement("h2", null, "playfair-display-headline", "Dessert");
   content.appendChild(dessertText);
  
   const dessertContent = [
@@ -107,9 +107,9 @@ const loadMenu = () => {
     box.appendChild(image);
     const boxText = CreateElement("div", null, "box-text");
     box.appendChild(boxText);
-    const headlineText = CreateElement("h3", null, null, headline);
+    const headlineText = CreateElement("h3", null, "playfair-display-headline", headline);
     boxText.appendChild(headlineText);
-    const description = CreateElement("p", null, null, text);
+    const description = CreateElement("p", null, "plus-jakarta-sans", text);
     boxText.appendChild(description);
   });
 };

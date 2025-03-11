@@ -46,7 +46,7 @@ const loadHome = () => {
   const testimony = CreateElement(
     "p", null,
     "testimony",
-    "Absolutely obsessed! The vibe is effortlessly chic, and every dish is as stunning as it is delicious. The truffle mushroom risotto was pure perfection, and the cocktails? Next level. A must-visit spot for foodies and Instagram lovers alike!"
+    "Absolutely obsessed! The vibe is effortlessly chic, and every dish is as stunning as it is delicious. The truffle mushroom risotto was pure perfection, and the desserts? Next level. A must-visit spot for foodies and Instagram lovers alike!"
   );
   const testimonyGiver = CreateElement("p", null, null, "- Amanda");
   const box = CreateElement("div", null, "testimony-box");
@@ -83,7 +83,12 @@ function initHome() {
   const content = CreateElement("div", "content", null);
 
   body.appendChild(content);
+
+  const logo = CreateElement("img", "logo");
+  logo.src = images["logo-odin-project-resto.svg"];
+  body.appendChild(logo);
   loadHome();
+  initFooter();
 }
 
 export { loadHome, initHome };

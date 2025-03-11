@@ -1,38 +1,15 @@
-import {getImages} from "./utils.js";
-import { CreateElement } from "./utils.js";
+import { CreateElement, getImages } from "./utils.js";
 
 const images = getImages(
   require.context("./images", false, /\.(png|jpe?g|svg)$/)
 );
 
+const loadHome = () => {
+  const content = document.querySelector("#content");
+  content.innerHTML = "";
 
-function initHome() {
-  const body = document.querySelector("body");
-  const header = CreateElement("div", "header");
-
-  body.appendChild(header);
-
-  const nav = CreateElement("nav");
-  header.appendChild(nav);
-
-  const ul = CreateElement("ul");
-  nav.appendChild(ul);
-
-  const buttons = [
-    { text: "Home", class: "home" },
-    { text: "Menu", class: "menu" },
-    { text: "Contact", class: "contact" },
-  ];
-
-  buttons.forEach(({ text, class: className }) => {
-    const li = CreateElement("li");
-    const button = CreateElement("button", className, text);
-    li.appendChild(button);
-    ul.appendChild(li);
-  });
-
-  const content = CreateElement("div", "content");
-  body.appendChild(content);
+  const promo = CreateElement("h2", null, null, "Promo");
+  content.appendChild(promo);
 
   const boxContent = [
     {
@@ -53,53 +30,58 @@ function initHome() {
   ];
 
   boxContent.forEach(({ asset, headline, text }) => {
-    const box = CreateElement("div", "box");
+    const box = CreateElement("div", null, "box");
     content.appendChild(box);
-    const image = CreateElement("img");
+    const image = CreateElement("img", null, "box-img");
     image.src = asset;
     box.appendChild(image);
-    const headlineText = CreateElement("h3", null, headline);
+    const headlineText = CreateElement("h3", null, null, headline);
     box.appendChild(headlineText);
-    const description = CreateElement("p", null, text);
+    const description = CreateElement("p", null, null, text);
     box.appendChild(description);
   });
 
   const testimony = CreateElement(
-    "blockquote",
+    "p", null,
     "testimony",
     "Absolutely obsessed! The vibe is effortlessly chic, and every dish is as stunning as it is delicious. The truffle mushroom risotto was pure perfection, and the cocktails? Next level. A must-visit spot for foodies and Instagram lovers alike!"
   );
-  const testimonyGiver = CreateElement("p", null, "Amanda");
-  const box = CreateElement("div", "box");
-  content.appendChild(box)
+  const testimonyGiver = CreateElement("p", null, null, "- Amanda");
+  const box = CreateElement("div", null, "box");
+  content.appendChild(box);
   box.appendChild(testimony);
   box.appendChild(testimonyGiver);
-
-  // const home = `
-  //     <div id="content">
-  //      <h1 class="hook">This is homepage</h1>
-  //      <div class="testimony">
-  //       <p>I've never had something this good!</p>
-  //      </div>
-  //     </div>
-  //     <div class="footer">
-  //       <p>image by</p>
-  //       <p>icon by</p>
-  //     </div>
-  //   </div>`;
-  // document.body.innerHTML = home;
   console.log(images);
-}
-
-const loadHome = () => {
-  const content = document.querySelector("#content");
-  const heading = document.createElement("h1");
-  const testiBox = document.createElement("div");
-  testiBox.classList.add("testimony");
-  testiBox.innerHTML = `<p>I've never had something this good!</p>`;
-  heading.textContent = "This is home page";
-  content.appendChild(heading);
-  content.appendChild(testiBox);
 };
 
-export { initHome, loadHome };
+function initHome() {
+  const body = document.querySelector("body");
+  const header = CreateElement("div", null, "header");
+
+  body.appendChild(header);
+
+  const nav = CreateElement("nav");
+  header.appendChild(nav);
+
+  const ul = CreateElement("ul");
+  nav.appendChild(ul);
+
+  const buttons = [
+    { text: "Home", class: "home" },
+    { text: "Menu", class: "menu" },
+    { text: "Contact", class: "contact" },
+  ];
+
+  buttons.forEach(({ text, class: className }) => {
+    const li = CreateElement("li");
+    const button = CreateElement("button", null, className, text);
+    li.appendChild(button);
+    ul.appendChild(li);
+  });
+  const content = CreateElement("div", "content", null);
+
+  body.appendChild(content);
+  loadHome();
+}
+
+export { loadHome, initHome };

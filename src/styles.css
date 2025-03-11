@@ -31,7 +31,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   font-family: Helvetica, Arial, system-ui;
-  height: 100vh;
+  /* height: 100vh; */
   
   line-height: 1.5;
   background-color: var(--bgcolor);
@@ -65,15 +65,25 @@ button:hover {
 }
 
 #content {
-  height: 80vh;
+  /* height: 80vh; */
   width: 60vw;
   margin: 1rem;
   background-color: var(--primary);
   text-align: center;
-  flex: 1;
+  /* flex: 1; */
 }
 
+.box {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
 
+.box-img {
+  width: 30%;
+  height: 30%;
+
+}
 
 .footer {
   margin: 1rem;

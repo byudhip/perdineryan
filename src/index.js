@@ -3,7 +3,7 @@ import * as home from "./home.js";
 import * as utils from "./utils.js";
 
 home.initHome();  
-const navMenu = document.querySelector("nav");
-navMenu.addEventListener("click", utils.buttonHandler);
+
+document.body.addEventListener("click", utils.buttonHandler);
 
 

@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+.playfair-display-headline {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.plus-jakarta-sans-italic {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: italic;
+}
+
 :root {
   --primary: #e0afa0;
   --hover: #d49484;
@@ -5,7 +28,6 @@
   --bgcolor: #f8f9fa;
   --regtext: #333333;
   --hitext: #d2b48c;
-  --logo: ;
 }
 
 /* Reset */
@@ -43,6 +65,15 @@ h2 {
   padding: 15px;
   width: 13rem;
   border-radius: 12px;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 ul {
@@ -55,7 +86,7 @@ ul {
 button {
   background-color: var(--primary);
   color: white;
-  font-size: clamp(0.5rem, 1rem, 45rem);
+  font-size: clamp(0.5rem, 1.2rem, 45rem);
   font-weight: bold;
   width: 6rem;
   height: 2rem;
@@ -72,13 +103,23 @@ button:hover {
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
 }
 
-#logo {
-  position:absolute;
+h3,
+p {
+  color: var(--regtext);
+}
+
+.logo {
+  position: absolute;
   top: 1%;
   left: 1%;
-  /* transform: rotate(270deg); */
   width: 200px;
   height: auto;
+}
+
+.logo:hover {
+  filter: invert(77%) sepia(23%) saturate(379%) hue-rotate(315deg)
+    brightness(96%) contrast(94%);
+  cursor: url("./images/cursor-odin-project-resto.png"), auto;
 }
 
 .header {
@@ -107,7 +148,12 @@ button:hover {
 
 .box:hover {
   transform: scale(1.02);
+  border: 1px solid var(--hover);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover h3 {
+  color: var(--hitext);
 }
 
 .box-img {
@@ -116,24 +162,42 @@ button:hover {
   height: auto;
 }
 
-.box h3,
-p {
-  color: var(--regtext);
-}
-
 .testimony-box {
   gap: 10px;
   margin: 10px;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid var(--secondary);
   border-radius: 10px;
   background-color: var(--primary);
   color: var(--bgcolor);
-  font-style: italic;
+}
+
+.general-box {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.general-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.general-box h3,
+.general-box p {
+  /* margin: auto; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
 .footer {
-  width: 60%;
+  width: 60vw;
   padding: 10px;
   display: flex;
   justify-content: space-between;

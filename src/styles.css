@@ -131,8 +131,9 @@ p {
 }
 
 .footer {
-  margin: 1rem;
-  align-self: flex-end;
+  width: 60%;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
